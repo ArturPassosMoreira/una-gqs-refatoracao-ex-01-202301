@@ -7,7 +7,7 @@ public class Mensagem {
     boolean erroTentativas = false;
 
     do {
-      System.out.println("\nSeu cartão de vacina esta em dia? Digite SIM ou NAO ?");
+      System.out.println("\nSeu cartÃ£o de vacina esta em dia? Digite SIM ou NAO ?");
       pessoa.cartaoVacinaEmDia = scanner.next().toUpperCase();
       if (pessoa.cartaoVacinaEmDia.equals("SIM") || pessoa.cartaoVacinaEmDia.equals("NAO")) {
         break;
@@ -30,7 +30,7 @@ public class Mensagem {
 
     do {
       System.out
-          .println("\nTeve algum dos sintomas recentemente? (dor de cabeça, febre,nausea, dor articular, gripe)" +
+          .println("\nTeve algum dos sintomas recentemente? (dor de cabeÃ§a, febre,nausea, dor articular, gripe)" +
               "Digite SIM ou NAO");
       pessoa.teveSintomasRecentemente = scanner.next().toUpperCase();
       if (pessoa.teveSintomasRecentemente.equals("SIM") || pessoa.teveSintomasRecentemente.equals("NAO")) {
@@ -101,16 +101,16 @@ public class Mensagem {
   public void imprimirRelatorioFinal(Pessoa pessoa) {
     System.out.println("\nNome: " + pessoa.nome);
     System.out.println("Idade: " + pessoa.idade + " anos");
-    System.out.println("Cartão Vacinal em Dia: " + pessoa.cartaoVacinaEmDia);
+    System.out.println("Cartï¿½o Vacinal em Dia: " + pessoa.cartaoVacinaEmDia);
     System.out.println("Teve sintomas recentemente: " + pessoa.teveSintomasRecentemente);
     System.out.println("Teve contato com pessoas infectadas: " + pessoa.teveContatoComPessoasSintomaticas);
     System.out.println("Esta retornando de viagem: " + pessoa.estaRetornandoViagem);
-    System.out.println("Porcentagem infecção: " + pessoa.porcentagemInfeccao);
-    System.out.println("Orientação Final: " + pessoa.orientacaoFinal);
+    System.out.println("Porcentagem infecÃ§Ã£o: " + pessoa.porcentagemInfeccao);
+    System.out.println("OrientaÃ§Ã£o Final: " + pessoa.orientacaoFinal);
   }
 
   public void imprimirMensagemErro() {
-    System.out.println("Não foi possivel realizar o diagnostico." +
+    System.out.println("Nï¿½o foi possivel realizar o diagnostico." +
         "\nGentileza procurar ajuda medica caso aparessa algum sintoma .");
   }
 }
