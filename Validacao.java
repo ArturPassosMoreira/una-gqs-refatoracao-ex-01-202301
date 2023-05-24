@@ -14,7 +14,7 @@ public class Validacao {
         mensagem.imprimirRelatorioFinal(pessoa);
       } else {
 
-        // Verifico a porcentagem de infecção
+        // Verifico a porcentagem de infecï¿½ï¿½o
         if (pessoa.porcentagemInfeccao >= 90) {
           pessoa.orientacaoFinal = "Paciente critico! Gentileza aguardar em lockdown por 10 dias para ser acompanhado.";
           mensagem.imprimirRelatorioFinal(pessoa);
@@ -25,10 +25,25 @@ public class Validacao {
               pessoa.orientacaoFinal = "Paciente com risco de estar infectado. Gentileza aguardar em lockdown por 02 dias para ser acompanhado.";
               mensagem.imprimirRelatorioFinal(pessoa);
             }if (pessoa.porcentagemInfeccao <=30) {
-                pessoa.orientacaoFinal = "Paciente sob observação. Caso apareça algum sintoma, gentileza buscar assistencia medica..";
+                pessoa.orientacaoFinal = "Paciente sob observaÃ§Ã£o. Caso apareï¿½a algum sintoma, gentileza buscar assistencia medica..";
                 mensagem.imprimirRelatorioFinal(pessoa);
         }
       }
+    }
+  }
+
+
+public void validacaoDasProximasPerguntas(Mensagem mensagem, Pessoa pessoa, boolean erroTentativas, Scanner scanner) {
+    // Valido se continuo perguntando ou se vou direto para a mensagem final
+    if (erroTentativas == false)
+      erroTentativas = mensagem.realizaPerguntaTeveSintomasRecentemente(pessoa, scanner);
+
+    if (erroTentativas == false) {
+      erroTentativas = mensagem.realizaPerguntaTeveContatoPessoasAssintomaticas(pessoa, scanner);
+    }
+
+    if (erroTentativas == false) {
+      erroTentativas = mensagem.realizaPerguntaEstaRetornandoViagemExterior(pessoa, scanner);
     }
   }
 }
