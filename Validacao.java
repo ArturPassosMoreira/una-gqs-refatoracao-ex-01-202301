@@ -16,7 +16,7 @@ public class Validacao {
 
         // Verifico a porcentagem de infecção
         if (pessoa.porcentagemInfeccao >= 90) {
-          pessoa.orientacaoFinal = "Paciente crítico! Gentileza aguardar em lockdown por 10 dias para ser acompanhado.";
+          pessoa.orientacaoFinal = "Paciente critico! Gentileza aguardar em lockdown por 10 dias para ser acompanhado.";
           mensagem.imprimirRelatorioFinal(pessoa);
          } if (pessoa.porcentagemInfeccao <=89) {
             pessoa.orientacaoFinal = "Paciente com risco de estar infectado. Gentileza aguardar em lockdown por 05 dias para ser acompanhado.";
@@ -31,3 +31,4 @@ public class Validacao {
       }
     }
   }
+}
