@@ -24,7 +24,7 @@ public class Mensagem {
     return erroTentativas;
   }
 
-  public boolean realizaPerguntaTeveSintomasRecenmente(Pessoa pessoa, Scanner scanner) {
+  public boolean realizaPerguntaTeveSintomasRecentemente(Pessoa pessoa, Scanner scanner) {
     int contador = 0;
     boolean erroTentativas = false;
 
