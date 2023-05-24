@@ -2,7 +2,7 @@ public class CalculoPorcentagem {
   public void calculaPorcentagem(Pessoa pessoa) {
     if (pessoa.estaRetornandoViagem.equals("SIM")) {
       pessoa.porcentagemInfeccao += 30;
-      pessoa.orientacaoFinal = "VocÃª ficarÃ¡ sob observaÃ§Ã£o por 05 dias.";
+      pessoa.orientacaoFinal = "Voce ficara¡ sob observação por 05 dias.";
     }
 
     if (pessoa.cartaoVacinaEmDia.equals("NAO")) {
