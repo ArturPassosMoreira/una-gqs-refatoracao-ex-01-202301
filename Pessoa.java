@@ -14,6 +14,7 @@ public class Pessoa {
     public void coletaNome(Pessoa pessoa, Scanner scanner) {
     System.out.println("\nInforme o seu nome: ");
     pessoa.nome = scanner.nextLine();
+    
     }
    
 
