@@ -8,7 +8,7 @@ class Programa {
     Mensagem mensagem = new Mensagem();
     Validacao validacao = new Validacao();
 
-    System.out.println("\tRelatÃ³rio Auxiliar de Controle de InfecÃ§Ãµes");
+    System.out.println("\tRelatorio Auxiliar de Controle de Infecções");
 
     pessoa.coletaNome(pessoa, scanner);
     pessoa.coletaIdade(pessoa, scanner);
